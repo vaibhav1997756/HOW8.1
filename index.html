@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Question 3</h2>
+
+    <input id="input" />
+    <button id="button" onclick="checkArmstrong()">Armstrong number</button>
+    <p id="output"></p>
+    <script>
+        function checkArmstrong() {
+            let sum = 0;
+            let num = Number(document.getElementById("input").value);
+
+            let temp = num;
+            while (temp > 0) {
+                rem = temp % 10;
+                sum = sum + rem * rem * rem;
+                temp = parseInt(temp / 10);
+
+            }
+            if (sum == num) {
+                document.write("Number is armstrong");
+            } else {
+                document.write("Number is not Armstrong");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
